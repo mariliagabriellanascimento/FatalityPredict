@@ -1,0 +1,124 @@
+/* global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-color: #ffffff;
+}
+
+.menuLateral {
+  width: 400px;
+  height: 100%;
+  background-color: #000000;
+  position: fixed;
+}
+
+.navegacaoLateral {
+  display: grid;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.conjuntoLateralCabecalho {
+  list-style: none;
+  padding: 0;
+}
+
+.conjuntoLateral {
+  list-style: none;
+  padding: 0;
+}
+
+.listaLateral {
+  padding: 15px;
+  margin: 25px;
+  text-align: center;
+}
+
+.listaLateralCabecalho {
+  text-align: center;
+}
+
+.listaLateral a {
+  color: white;
+  text-decoration: none;
+}
+
+.listaLateral {
+  border: solid 1px transparent; 
+}
+
+.listaLateral:hover {
+  border: solid 1px #ffffff; 
+}
+
+#listaHome {
+  background-color: #AD0000;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+#listaBaseDados {
+  background-color: #787000;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+#listaEDA {
+  background-color: #005C00;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+#listaLearnMore {
+  background-color: #AD0000;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+#listaPF {
+  background-color: #787000;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+#listaGraficos {
+  background-color: #005C00;
+  border-radius: 8px;
+  width: 300px;
+  justify-self: center;
+}
+
+.textoRodape {
+  color:#ffffff;
+}
+
+.linkEquipe {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.linkEquipe:hover {
+  text-decoration: underline;
+}
+
+.conjuntoLateralRodape {
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.listaLateralRodape {
+  align-self: center;
+}

@@ -1,0 +1,81 @@
+.conteudo-principal-home {
+  margin-left: 400px;
+  padding: 20px;
+}
+
+.container-explicacao {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.paragrafo-intro {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.grid-explicacao {
+  display: grid;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.card-explicacaoGrafico {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-explicacao {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-secundario {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.lista-explicacaoGrafico {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-explicacao {
+  list-style: none;
+}
+
+.item-explicacaoGrafico {
+  margin: 15px;
+  width: 33%;
+}
+.item-explicacao {
+  margin: 15px;
+}
+
+.grafico {
+  margin-top: 20px;
+}
+
+.grafico img {
+  width: 350px;
+  border-radius: 6px;
+}
+
+.paragrafo-final {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.titulosGraficos {
+  margin-bottom: 10px;
+}

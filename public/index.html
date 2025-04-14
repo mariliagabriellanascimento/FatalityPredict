@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FatalityPredict - Home</title>
+  <link rel="stylesheet" href="../src/styles/global.css">
+  <link rel="stylesheet" href="../src/styles/home.css">
+</head>
+<body>
+
+  <aside class="menuLateral">
+    <nav class="navegacaoLateral">
+
+      <header class="cabecalho">
+        <ul class="conjuntoLateralCabecalho">
+          <li class="listaLateralCabecalho"><img src="../src/assets/images/logo/car.png" alt="Logo FatalityPredict Carro" width="50%">
+          </li>
+          <li class="listaLateralCabecalho"><img src="../src/assets/images/logo/traffic-sign.png" alt="Logo FatalityPredict Sinal de Trânsito" width="30%">
+          </li>
+          <li class="listaLateralCabecalho"><img src="../src/assets/images/logo/name.png" alt="Logo FatalityPredict Nome" width="50%">
+          </li>
+        </ul>
+      </header>
+
+      <section class="menu">
+        <ul class="conjuntoLateral">
+          <li class="listaLateral" id="listaHome">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="listaLateral" id="listaBaseDados">
+            <a href="../src/pages/basedados.html">Data Base</a>
+          </li>
+          <li class="listaLateral" id="listaEDA">
+            <a href="../src/pages/eda.html">Exploratory Data Analysis</a>
+          </li>
+          <li class="listaLateral" id="listaLearnMore">
+            <a href="../src/pages/saibamais.html">Learn More</a>
+          </li>
+          <li class="listaLateral" id="listaPF">
+            <a href="../src/pages/previsaofatalidade.html">FatalityPredict</a>
+          </li>
+          <li class="listaLateral" id="listaGraficos">
+            <a href="../src/pages/graficos.html">Graphics</a>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="rodape">
+        <ul class="conjuntoLateralRodape">
+          <li class="listaLateralRodape">
+            <p class="textoRodape">FatalityPredict&copy; 2025.</p>
+          </li>
+          <li class="listaLateralRodape">
+            <a href="../src/pages/sobrenos.html" class="linkEquipe">Sobre Nós</a>
+          </li>
+          <li class="listaLateralRodape">
+            <a href="https://github.com/mariliagabriellanascimento/FatalityPredict"><img src="../src/assets/images/icon/git.png" width="36px" alt="Logo GitHub"></a>
+          </li>
+        </ul>
+    </footer>
+
+    </nav>
+  </aside>
+
+  <main class="conteudo-principal-home">
+    <section class="container-explicacao">
+      <h1 class="titulo-principal">Previsão de Acidentes de Trânsito no Brasil: Análise de Dados do DETRAN 2020</h1>
+
+      <p class="paragrafo-intro">
+        <b>O Problema:</b> Os acidentes de trânsito são uma das principais causas de mortes no Brasil, representando um grave problema de saúde pública e segurança viária. Em 2020, o Brasil registrou milhares de acidentes, com uma grande variedade de fatores envolvidos, desde condições climáticas até comportamentos dos condutores. A complexidade desses eventos exige uma análise mais aprofundada para identificar padrões, prever cenários e, o mais importante, prevenir futuras tragédias.
+      </p>
+
+      <p class="paragrafo-intro">
+        <b>O Que Estamos Propondo:</b> Neste projeto, buscamos explorar e analisar dados de acidentes de trânsito do DETRAN 2020 com o objetivo de desenvolver modelos preditivos capazes de prever a severidade dos acidentes. Através da análise de fatores como condições dos veículos, comportamento dos condutores, e características dos acidentes, queremos criar soluções que possam ajudar na tomada de decisões para reduzir o número de vítimas no trânsito.
+      </p>
+
+      <p class="paragrafo-intro">
+        <b>Importante:</b> As previsões realizadas por nosso modelo são baseadas em dados históricos e estatísticas, e não devem ser interpretadas como um diagnóstico final. Assim como em diagnósticos médicos, as previsões podem sugerir tendências, mas não substituem a análise especializada. Este projeto visa apoiar políticas públicas e estratégias de prevenção, e não determinar o que ocorrerá em um cenário específico.
+      </p>
+
+      <div class="grid-explicacao">
+          <div class="card-explicacaoGrafico">
+            <h2 class="titulo-secundario">Graficamente:</h2>
+            <ul class="lista-explicacaoGrafico">
+              <li class="item-explicacaoGrafico">Categorias de gravidade dos acidentes mostrando o desbalanceamento da base em favor dos casos "Não Fatal".
+                <div class="grafico">
+                  <p class="titulosGraficos"><b>Distribuição de Severidade dos Acidentes</b></p>
+                  <img src="../src/assets/images/graficos/balanceamento-da-base.png" alt="Gráfico de Severidade dos Acidentes" width="70%">
+                </div>
+              </li>
+                <li class="item-explicacao">O não uso de cinto de segurança está associado a acidentes mais graves.
+                  <div class="grafico">
+                    <p class="titulosGraficos"><b>Relação entre Uso de Cinto de Segurança e Gravidade dos Acidentes</b></p>
+                    <img src="../src/assets/images/graficos/distribuicao-cinto-seguranca.png" alt="Gráfico sobre Uso de Cinto de Segurança" width="50%">
+                  </div>
+                </li>
+                <li class="item-explicacao">Embriguez ao volante, embora pouco frequente, agrava os acidentes.
+                  <div class="grafico">
+                    <p class="titulosGraficos"><b>Impacto da Embriaguez no Aumento da Gravidade dos Acidentes</b></p>
+                    <img src="../src/assets/images/graficos/distribuicao-embreagues.png" alt="Gráfico sobre Embriaguez" width="50%">
+                  </div>
+                </li>
+            </ul>
+          </div>
+
+          <div class="card-explicacao">
+              <h2 class="titulo-secundario">Nosso Modelo Preditivo:</h2>
+              <ul class="lista-explicacao">
+                  <li class="item-explicacao"><b>Análise Exploratória de Dados (EDA):</b>Estudo aprofundado dos dados para identificar padrões e correlacionar variáveis.</li>
+                  <li class="item-explicacao"><b>Modelagem Preditiva:</b>Utilização de técnicas de machine learning como Random Forest, XGBoost e outras para prever a severidade dos acidentes.</li>
+                  <li class="item-explicacao"><b>Fatores de Risco:</b>Identificação dos principais fatores que aumentam a gravidade dos acidentes.</li>
+              </ul>
+          </div>
+    
+      </div>
+      
+      <h2 class="titulo-secundario">Conclusão</h2>
+      <p class="paragrafo-final"><b>O Caminho Para a Redução de Acidentes:</b>
+            Com base nas análises e modelos desenvolvidos, nosso objetivo é fornecer informações valiosas para autoridades de trânsito e pesquisadores. O projeto não só revela os padrões de acidentes como também aponta recomendações para melhorar a segurança viária. Através da combinação de dados históricos e insights preditivos, esperamos contribuir com políticas públicas e estratégias mais eficazes.
+      </p>
+
+    </section>
+  </main>
+</body>
+</html>
