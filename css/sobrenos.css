@@ -1,0 +1,63 @@
+.cabecalhoSobreNos {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.conteudo-principal-sobrenos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #555;
+}
+
+.team-member a {
+    display: inline-block;
+    margin: 10px 5px;
+    color: #0077b5; 
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.team-member a:hover {
+    color: #005582;
+}
+
+.rodapeSobreNos {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

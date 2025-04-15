@@ -62,5 +62,301 @@
     </nav>
   </aside>
 
+  <main class="conteudo-principal-PF">
+    <form id="formulario">
+      <label for="tipoAcidente">1. Qual o tipo de acidente ocorrido?<span class="obrigatorio"> *</span></label>
+      <select id="tipoAcidente" name="tipoAcidente" required>
+        <option value="">Selecione</option>
+        <option value="fatal">Fatal</option>
+        <option value="nao_fatal">Não fatal</option>
+        <option value="sem_ferimentos">Sem ferimentos</option>
+        <option value="nao_informado">Não informado</option>
+      </select>
+  
+      <label for="horario">2. Em que horário o acidente aconteceu?<span class="obrigatorio"> *</span></label>
+      <select id="horario" name="horario" required>
+        <option value="">Selecione</option>
+        <option value="00:00">00:00</option>
+        <option value="01:00">01:00</option>
+        <option value="02:00">02:00</option>
+        <option value="03:00">03:00</option>
+        <option value="04:00">04:00</option>
+        <option value="05:00">05:00</option>
+        <option value="06:00">06:00</option>
+        <option value="07:00">07:00</option>
+        <option value="08:00">08:00</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+        <option value="23:00">23:00</option>
+      </select>
+  
+      <label for="diaSemana">3. Em que dia da semana ocorreu o acidente?<span class="obrigatorio"> *</span></label>
+      <select id="diaSemana" name="diaSemana" required>
+        <option value="">Selecione</option>
+        <option>Domingo</option>
+        <option>Segunda-feira</option>
+        <option>Terça-feira</option>
+        <option>Quarta-feira</option>
+        <option>Quinta-feira</option>
+        <option>Sexta-feira</option>
+        <option>Sábado</option>
+      </select>
+
+      <label for="condicaoVia">4. Qual era a condição da via no momento do acidente?<span class="obrigatorio"> *</span></label>
+      <select id="condicaoVia" name="condicaoVia" required>
+        <option value="">Selecione</option>
+        <option value="boa">Boa</option>
+        <option value="regular">Regular</option>
+        <option value="ruim">Ruim</option>
+        <option value="nao_informado">Não informado</option>
+      </select>
+
+      <label for="veiculosEnvolvidos">5. Quantos veículos estiveram envolvidos?<span class="obrigatorio"> *</span></label>
+      <select id="veiculosEnvolvidos" name="veiculosEnvolvidos" required>
+        <option value="">Selecione</option>
+        <option value="1">1 veículo</option>
+        <option value="2">2 veículos</option>
+        <option value="3">3 veículos</option>
+        <option value="4">4 veículos</option>
+        <option value="5">5 veículos</option>
+        <option value="6">6 veículos</option>
+        <option value="7">7 veículos</option>
+        <option value="8">8 veículos</option>
+        <option value="9">9 veículos</option>
+        <option value="10">10 veículos</option>
+        <option value="mais_10">Mais de 10 veículos</option>
+      </select>
+
+      <label for="tipoVeiculos">6. Qual o(s) tipo(s) de veículo(s) envolvido(s)?</label>
+      <select id="tipoVeiculos" name="tipoVeiculos">
+        <option value="">Selecione</option>
+        <option value="carro">Carro</option>
+        <option value="moto">Moto</option>
+        <option value="caminhao">Caminhão</option>
+        <option value="onibus">Ônibus</option>
+        <option value="bicicleta">Bicicleta</option>
+        <option value="pedestre">Pedestre</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="vitimasFatais">7. Quantas vítimas fatais houve no acidente?</label>
+      <select id="vitimasFatais" name="vitimasFatais">
+        <option value="">Selecione</option>
+        <option value="0">Nenhuma</option>
+        <option value="1">1 vítima</option>
+        <option value="2">2 vítimas</option>
+        <option value="3">3 vítimas</option>
+        <option value="4">4 vítimas</option>
+        <option value="5">5 vítimas</option>
+        <option value="6">6 vítimas</option>
+        <option value="7">7 vítimas</option>
+        <option value="8">8 vítimas</option>
+        <option value="9">9 vítimas</option>
+        <option value="10">10 vítimas</option>
+        <option value="mais_10">Mais de 10 vítimas</option>
+      </select>
+  
+      <label for="feridos">8. Houve vítimas com ferimentos?</label>
+      <select id="feridos" name="feridos">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="sexoVitimas">9. Qual era o sexo das vítimas fatais?</label>
+      <select id="sexoVitimas" name="sexoVitimas">
+        <option value="">Selecione</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="nao_informado">Não informado</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="faixaEtaria">10. Qual a faixa etária das vítimas fatais?</label>
+      <select id="faixaEtaria" name="faixaEtaria">
+        <option value="">Selecione</option>
+        <option value="menor_18">Menor de 18 anos</option>
+        <option value="18_30">18 a 30 anos</option>
+        <option value="31_45">31 a 45 anos</option>
+        <option value="46_60">46 a 60 anos</option>
+        <option value="maior_60">Maior de 60 anos</option>
+        <option value="nao_informado">Não informado</option>
+      </select>
+
+      <label for="estado">11. Em qual estado o acidente ocorreu?<span class="obrigatorio"> *</span></label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+
+      <label for="tipoVia">12. Em que tipo de via aconteceu o acidente?<span class="obrigatorio"> *</span></label>
+      <select id="tipoVia" name="tipoVia" required>
+        <option value="">Selecione</option>
+        <option value="rua">Rua</option>
+        <option value="avenida">Avenida</option>
+        <option value="rodovia">Rodovia</option>
+        <option value="estrada_rural">Estrada rural</option>
+        <option value="outro">Outro</option>
+      </select>
+  
+      <label for="iluminacao">13. A via possuía iluminação no momento do acidente?</label>
+      <select id="iluminacao" name="iluminacao">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="cruzamento">14. O acidente ocorreu em cruzamento ou interseção?</label>
+      <select id="cruzamento" name="cruzamento">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="sinalizacao">15. Havia sinalização no local do acidente?</label>
+      <select id="sinalizacao" name="sinalizacao">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="habilitacao">16. O(s) condutor(es) possuíam habilitação?</label>
+      <select id="habilitacao" name="habilitacao">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="alcoolDrogas">17. Houve suspeita de ingestão de álcool ou drogas pelo(s) condutor(es)?</label>
+      <select id="alcoolDrogas" name="alcoolDrogas">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não identificado</option>
+      </select>
+  
+      <label for="cintoCapacete">18. O(s) condutor(es) utilizavam cinto de segurança ou capacete?<span class="obrigatorio"> *</span></label>
+      <select id="cintoCapacete" name="cintoCapacete" required>
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Parcialmente</option>
+      </select>
+  
+      <label for="velocidade">19. O excesso de velocidade foi uma causa provável?<span class="obrigatorio"> *</span></label>
+      <select id="velocidade" name="velocidade" required>
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Suspeita</option>
+      </select>
+  
+      <label for="clima">20. Qual era a condição climática no momento do acidente?<span class="obrigatorio"> *</span></label>
+      <select id="clima" name="clima" required>
+        <option value="">Selecione</option>
+        <option value="ensolarado">Ensolarado</option>
+        <option value="nublado">Nublado</option>
+        <option value="chuva">Chuva</option>
+        <option value="nevoeiro">Nevoeiro</option>
+        <option value="ventos_fortes">Ventos fortes</option>
+        <option value="nao_informado">Não informado</option>
+      </select>
+  
+      <label for="visibilidade">21. A visibilidade estava comprometida?</label>
+      <select id="visibilidade" name="visibilidade">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="pessoasVeiculo">22. Quantas pessoas estavam nos veículos envolvidos?</label>
+      <select id="pessoasVeiculo" name="pessoasVeiculo">
+        <option value="">Selecione</option>
+        <option value="1">1 pessoa</option>
+        <option value="2">2 pessoas</option>
+        <option value="3">3 pessoas</option>
+        <option value="4">4 pessoas</option>
+        <option value="5">5 pessoas</option>
+        <option value="6">6 pessoas</option>
+        <option value="7">7 pessoas</option>
+        <option value="8">8 pessoas</option>
+        <option value="9">9 pessoas</option>
+        <option value="10">10 pessoas</option>
+        <option value="mais_10">Mais de 10 pessoas</option>
+      </select>
+  
+      <label for="resgate">23. Houve necessidade de atendimento por equipe de resgate?</label>
+      <select id="resgate" name="resgate">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="interdicao">24. Houve interdição da via?</label>
+      <select id="interdicao" name="interdicao">
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+  
+      <label for="causa">25. Qual foi a principal causa presumida do acidente?</label>
+      <select id="causa" name="causa">
+        <option value="">Selecione</option>
+        <option value="excesso_velocidade">Excesso de velocidade</option>
+        <option value="condicoes_da_via">Condições da via (buracos, pavimento irregular)</option>
+        <option value="falta_atenção_motorista">Falta de atenção do motorista</option>
+        <option value="uso_de_celular">Uso de celular</option>
+        <option value="ingestao_alcool_drogas">Ingestão de álcool ou drogas</option>
+        <option value="fadiga_motorista">Fadiga do motorista</option>
+        <option value="clima_adverso">Clima adverso</option>
+        <option value="falha_mecanica">Falha mecânica</option>
+        <option value="outro">Outro</option>
+        <option value="nao_informado">Não informado</option>
+      </select>
+
+  
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script src="../js/forms.js"></script>
 </body>
 </html>
