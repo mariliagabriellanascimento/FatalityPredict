@@ -10,6 +10,11 @@ body {
   background-color: #ffffff;
 }
 
+code {
+  font-size: 16px;
+  background-color: #ededed;
+}
+
 .menuLateral {
   width: 400px;
   height: 100%;

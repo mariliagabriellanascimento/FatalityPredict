@@ -62,5 +62,80 @@
     </nav>
   </aside>
 
+  <main class="conteudo-principal-eda">
+    <section class="container-explicacao">
+      <h1 class="titulo-principal">Análise Exploratória de Dados (EDA)</h1>
+  
+      <p class="paragrafo-intro">
+        A etapa de EDA teve como objetivo entender a estrutura dos dados de acidentes de trânsito fornecidos pelo DETRAN em 2020. Foram exploradas distribuições, outliers, valores faltantes e balanceamento da base para garantir qualidade na construção do modelo preditivo.
+      </p>
+  
+      <div class="card-explicacao">
+        <h2 class="titulo-secundario">Limpeza e Qualidade dos Dados</h2>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">Presença de <b>valores ausentes</b> nas colunas <code>pedestre</code> e <code>passageiro</code> (~10%), tratados com exclusão ou preenchimento condicional.</li>
+          <li class="item-explicacao">Alguns registros com <b>idade igual a 0</b> ou negativa foram removidos por não representarem valores válidos.</li>
+          <li class="item-explicacao">A coluna <code>data_hora_boletim</code> foi convertida para tipo <code>datetime</code> para permitir análises temporais como distribuição por hora.</li>
+          <li class="item-explicacao">Valores inconsistentes como <code>"NAO INFORMADO"</code> foram filtrados na variável-alvo para evitar ruído na modelagem.</li>
+        </ul>
+      </div>
+  
+      <div class="card-explicacaoGraficoEDA">
+        <h2 class="titulo-secundario">Balanceamento da Base</h2>
+        <p class="paragrafo-intro">A base apresenta um desbalanceamento importante entre as classes de severidade, como mostra o gráfico abaixo:</p>
+        <div class="grafico">
+          <p class="titulosGraficos"><b>Distribuição das Classes de Severidade</b></p>
+          <img src="../img/graficos/balanceamento-da-base.png" alt="Distribuição das Classes de Severidade">
+        </div>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">A classe <b>“FATAL”</b> representa uma minoria, exigindo estratégias como <b><code>SMOTE</code></b> ou <b><code>undersampling</code></b>.</li>
+          <li class="item-explicacao">A classe <b>“NAO INFORMADO”</b> foi removida para evitar viés na avaliação do modelo.</li>
+        </ul>
+      </div>
+  
+      <div class="card-explicacaoGraficoEDA">
+        <h2 class="titulo-secundario">Principais Padrões Detectados</h2>
+        <ul class="lista-explicacaoGrafico">
+          <li class="item-explicacaoGrafico">Maior gravidade em casos sem uso de cinto de segurança.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Distribuição por Uso de Cinto de Segurança</b></p>
+              <img src="../img/graficos/distribuicao-cinto-seguranca.png" alt="Cinto de Segurança x Severidade">
+            </div>
+          </li>
+          <li class="item-explicacaoGrafico">Casos de embriaguez, apesar de menos frequentes, estão mais associados a acidentes fatais.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Distribuição de Embriaguez e Severidade</b></p>
+              <img src="../img/graficos/distribuicao-embreagues.png" alt="Embriaguez x Severidade">
+            </div>
+          </li>
+          <li class="item-explicacaoGrafico">Acidentes ocorrem com maior frequência entre 17h e 19h.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Distribuição de Acidentes por Hora</b></p>
+              <img src="../img/graficos/distribuicao-acidentes-hora-por-dia.png" alt="Acidentes por Hora do Dia">
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="card-explicacao">
+        <h2 class="titulo-secundario">Insights Quantitativos</h2>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">Variáveis como <b>idade</b> e <b>número de envolvidos</b> foram analisadas por boxplots e quartis por severidade.</li>
+          <li class="item-explicacao">Criação de nova feature <code>hora_acidente</code> a partir de <code>data_hora_boletim</code>.</li>
+          <li class="item-explicacao">Um <b>mapa de correlação</b> mostrou que o não uso do cinto, embriaguez e número de envolvidos têm correlação positiva com maior severidade.</li>
+        </ul>
+        <div class="grafico">
+          <p class="titulosGraficos"><b>Mapa de Correlação entre Variáveis</b></p>
+          <img src="../img/graficos/heatmap-correlacao.png" alt="Heatmap de Correlação">
+        </div>
+      </div>
+  
+      <h2 class="titulo-secundario">Conclusões da EDA</h2>
+      <p class="paragrafo-final">
+        A análise exploratória revelou a necessidade de limpeza, padronização e balanceamento dos dados. Também foi essencial para identificar variáveis-chave na severidade dos acidentes, como uso de cinto, embriaguez e idade. Essas descobertas guiaram o processo de engenharia de atributos e escolha dos modelos preditivos.
+      </p>
+    </section>
+  </main>
+  
 </body>
 </html>
