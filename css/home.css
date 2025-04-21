@@ -56,8 +56,8 @@
 
 .item-explicacaoGrafico {
   margin: 15px;
-  width: 33%;
 }
+
 .item-explicacao {
   margin: 15px;
 }
@@ -67,7 +67,7 @@
 }
 
 .grafico img {
-  width: 350px;
+  max-width: 260px;
   border-radius: 6px;
 }
 

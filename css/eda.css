@@ -12,11 +12,10 @@
 }
 
 #horapdia {
-    width: auto;
-    height: 210px;
+    max-width: 280px;
 }
 
 #heatmap {
-    width: 800px;
+    min-width: 800px;
     height: auto;
 }
