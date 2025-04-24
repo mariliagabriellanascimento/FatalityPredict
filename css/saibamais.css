@@ -26,7 +26,7 @@
 .carrossel-list-noticia .carrossel-item-noticia .carrossel-link-noticia {
     user-select: none;
     display: block;
-    background: linear-gradient(#fdf6ce, #fdf7cd, #fbf1bd);
+    background: linear-gradient(#fdcece, #fdcdcd, #fbbdbd);
     padding: 18px;
     border-radius: 12px;
     text-decoration: none;

@@ -32,6 +32,10 @@ code {
   padding: 0;
 }
 
+.conjuntoLateralCabecalho img {
+  max-width: 300px;
+}
+
 .conjuntoLateral {
   list-style: none;
   padding: 0;
