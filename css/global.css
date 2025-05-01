@@ -15,16 +15,28 @@ code {
   background-color: #ededed;
 }
 
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .menuLateral {
   width: 400px;
-  height: 100%;
+  height: 100vh; 
   background-color: #000000;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .navegacaoLateral {
-  display: grid;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  padding: 30px 0;
 }
 
 .conjuntoLateralCabecalho {
@@ -120,6 +132,8 @@ code {
 }
 
 .conjuntoLateralRodape {
+
+  list-style: none;
   display: flex;
   margin-top: 80px;
   justify-content: space-between;
