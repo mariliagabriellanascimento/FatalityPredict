@@ -149,6 +149,12 @@
   }
   
   .grafico img {
-    max-width: 400px;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grafico img {
+    max-width: 360px;
   }
 }
