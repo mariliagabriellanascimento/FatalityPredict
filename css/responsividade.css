@@ -158,3 +158,9 @@
     max-width: 360px;
   }
 }
+
+@media (max-width: 375px) {
+  .grafico img {
+    max-width: 250px;
+  }
+}
