@@ -31,13 +31,13 @@
   top: 0;
   right: 0;
   z-index: 1000;
-  font-size: 48px;
+  font-size: 40px;
   color: #FFFFFF;
   margin: 20px;
 }
 
 .botao-fechar {
-  font-size: 48px;
+  font-size: 40px;
   margin: 20px;
 }
 
@@ -159,8 +159,15 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   .grafico img {
     max-width: 250px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .grafico img {
+    max-width: 230px;
   }
 }
