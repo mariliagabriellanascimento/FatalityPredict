@@ -57,6 +57,7 @@ code {
   padding: 15px;
   margin: 25px;
   text-align: center;
+  display: block;
 }
 
 .listaLateralCabecalho {
@@ -132,7 +133,6 @@ code {
 }
 
 .conjuntoLateralRodape {
-
   list-style: none;
   display: flex;
   margin-top: 80px;
@@ -144,3 +144,4 @@ code {
 .listaLateralRodape {
   align-self: center;
 }
+

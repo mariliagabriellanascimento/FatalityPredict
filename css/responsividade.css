@@ -1,0 +1,150 @@
+/* ESTILO MOBILE */
+
+#logoMobile {
+  height: 80px;
+  width: auto;
+}
+
+.menuLateralmobile {
+  display: none;
+}
+
+.menu-mobile {
+  color: #FFFFFF;
+  background-color: #000000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 0%;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+  width: 50%;
+}
+
+.botao-abrir {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: 48px;
+  color: #FFFFFF;
+  margin: 20px;
+}
+
+.botao-fechar {
+  font-size: 48px;
+  margin: 20px;
+}
+
+.listaLateralMobile {
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+  text-align: center;
+}
+
+.listaLateralMobile a {
+  color: white;
+  text-decoration: none;
+}
+
+#listaHomeMobile {
+  background-color: #AD0000;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+#listaBaseDadosMobile {
+  background-color: #787000;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+#listaEDAMobile {
+  background-color: #005C00;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+#listaLearnMoreMobile {
+  background-color: #AD0000;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+#listaPFMobile {
+  background-color: #787000;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+#listaGraficosMobile {
+  background-color: #005C00;
+  border-radius: 8px;
+  width: 220px;
+  justify-self: center;
+}
+
+.cabecalhoMobile {
+  background-color: #000000;
+  color: white;
+  justify-items: left;
+  z-index: 800;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+  .conteudo-principal-home {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-basedados {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-eda {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-saibamais {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-PF {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-graficos {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .conteudo-principal-sobrenos {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+
+  .menuLateral {
+    display: none;
+  }
+
+  .menuLateralmobile {
+    display: block;
+  }
+}
