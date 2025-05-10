@@ -24,7 +24,7 @@
 }
 
 .carrossel-list-features .carrossel-item-features .carrossel-link-features {
-    user-select: none;
+    /* user-select: none; */
     display: block;
     background: linear-gradient(#ddfdce, #d3fdcd, #c7fbbd);
     padding: 18px;
