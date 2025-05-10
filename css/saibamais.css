@@ -24,7 +24,7 @@
 }
 
 .carrossel-list-noticia .carrossel-item-noticia .carrossel-link-noticia {
-    user-select: none;
+    /* user-select: none; */
     display: block;
     background: linear-gradient(#fdcece, #fdcdcd, #fbbdbd);
     padding: 18px;

@@ -46,8 +46,8 @@
 
 .lista-explicacaoGrafico {
   list-style: none;
-  justify-items: center;
-  justify-content: space-between;
+  justify-items: center !important; 
+  
 }
 
 .lista-explicacao {
@@ -68,7 +68,9 @@
 }
 
 .grafico img {
-  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 6px;
 }
 

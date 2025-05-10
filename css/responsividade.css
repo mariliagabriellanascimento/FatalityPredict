@@ -34,6 +34,7 @@
   font-size: 40px;
   color: #FFFFFF;
   margin: 20px;
+  display: none;
 }
 
 .botao-fechar {
@@ -140,36 +141,15 @@
     margin-bottom: 100px;
   }
 
+  .botao-abrir {
+    display: block;
+  }
+  
   .menuLateral {
     display: none;
   }
 
   .menuLateralmobile {
     display: block;
-  }
-  
-  .grafico img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 576px) {
-  .grafico img {
-    max-width: 360px;
-  }
-}
-
-@media (max-width: 414px) {
-  .grafico img {
-    max-width: 250px;
-  }
-}
-
-
-@media (max-width: 375px) {
-  .grafico img {
-    max-width: 230px;
   }
 }
