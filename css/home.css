@@ -46,7 +46,6 @@
 
 .lista-explicacaoGrafico {
   list-style: none;
-  justify-items: center !important; 
   
 }
 
@@ -56,6 +55,7 @@
 
 .item-explicacaoGrafico {
   margin: 15px;
+  text-align: center !important;
 }
 
 .item-explicacao {
