@@ -12,6 +12,8 @@
 
 <body>
 
+  <!-- MENU LATERAL -->
+
   <aside class="menuLateral">
     <nav class="navegacaoLateral">
 
@@ -51,7 +53,7 @@
             <p class="textoRodape">FatalityPredict&copy; 2025.</p>
           </li>
           <li class="listaLateralRodape">
-            <a href="./sobrenos.html" class="linkEquipe">Sobre Nós</a>
+            <a href="./sobrenos.html" class="linkEquipe">About Us</a>
           </li>
           <li class="listaLateralRodape">
             <a href="https://github.com/mariliagabriellanascimento/FatalityPredict"><img src="../img/icon/git.png"
@@ -75,10 +77,10 @@
     </header>
 
     <footer class="rodapeSobreNos">
-      <p>FatalityPredict&copy; 2025 - Todos os direitos reservados.</p>
-      <a href="sobrenos.html" class="linkEquipe">Sobre Nós</a>
+      <p>FatalityPredict&copy; 2025.</p>
+      <a href="sobrenos.html" class="linkEquipe">About Us</a>
       <a href="https://github.com/mariliagabriellanascimento/FatalityPredict"><img src="../img/icon/git.png"
-        width="36px" alt="Logo GitHub"></a>
+          width="36px" alt="Logo GitHub"></a>
     </footer>
   </div>
 
@@ -114,89 +116,83 @@
     </nav>
   </div>
 
+  <!-- CONTEUDO PRINCIPAL BASE DE DADOS -->
+
   <main class="conteudo-principal-basedados">
     <section class="container-explicacao">
-      <h1 class="titulo-principal">Base de Dados Utilizada no Projeto</h1>
-
+      <h1 class="titulo-principal">Dataset Used in the Project</h1>
+  
       <p class="paragrafo-intro">
-        A base de dados utilizada neste projeto foi obtida na plataforma <a
-          href="https://www.kaggle.com/datasets/raphaelmarconato/detran-accidents-2020" target="_blank">Kaggle</a> e
-        contém informações sobre acidentes de trânsito registrados pelo DETRAN em 2020 no Brasil.
-        Ela foi disponibilizada por <a href="https://www.kaggle.com/raphaelmarconato" target="_blank">Raphael
-          Marconato</a>, com o intuito de promover estudos voltados à análise e predição da gravidade dos acidentes.
+        The dataset used in this project was obtained from the <a
+          href="https://www.kaggle.com/datasets/raphaelmarconato/detran-accidents-2020" target="_blank">Kaggle</a>
+        platform and contains information about traffic accidents recorded by DETRAN in Brazil during 2020.
+        It was shared by <a href="https://www.kaggle.com/raphaelmarconato" target="_blank">Raphael Marconato</a>,
+        aiming to promote studies focused on analyzing and predicting accident severity.
       </p>
-
+  
       <p class="paragrafo-intro">
-        O dataset possui <b>22.644 registros</b> distribuídos em <b>18 colunas</b>, das quais <b>14 são variáveis
-          categóricas</b>. Os dados foram organizados de forma a permitir análises estatísticas e construção de modelos
-        preditivos.
+        The dataset contains <b>22,644 records</b> distributed across <b>18 columns</b>, of which <b>14 are categorical variables</b>.
+        The data is organized to allow statistical analysis and predictive model building.
       </p>
-
+  
       <div class="card-explicacao">
-        <h2 class="titulo-secundario">Principais Variáveis da Base</h2>
+        <h2 class="titulo-secundario">Main Variables in the Dataset</h2>
         <ul class="lista-explicacao">
-          <li class="item-explicacao"><b><code>num_boletim</code>:</b> Número do boletim de ocorrência.</li>
-          <li class="item-explicacao"><b><code>data_hora_boletim</code>:</b> Data e hora do registro.</li>
-          <li class="item-explicacao"><b><code>nº_envolvido</code>:</b> Número de pessoas envolvidas.</li>
-          <li class="item-explicacao"><b><code>condutor</code>:</b> Indica se o condutor foi responsável pelo acidente.
-          </li>
-          <li class="item-explicacao"><b><code>desc_severidade</code>:</b> Informa se o acidente foi fatal ou não.</li>
-          <li class="item-explicacao"><b><code>sexo</code>:</b> Sexo da pessoa envolvida.</li>
-          <li class="item-explicacao"><b><code>cinto_seguranca</code>:</b> Uso do cinto de segurança.</li>
-          <li class="item-explicacao"><b><code>embriaguez</code>:</b> Condição do condutor quanto ao uso de álcool.</li>
-          <li class="item-explicacao"><b><code>idade</code></b> / <b><code>nascimento</code>:</b> Faixa etária e data de
-            nascimento.</li>
+          <li class="item-explicacao"><b><code>num_boletim</code>:</b> Police report number.</li>
+          <li class="item-explicacao"><b><code>data_hora_boletim</code>:</b> Date and time of the report.</li>
+          <li class="item-explicacao"><b><code>nº_envolvido</code>:</b> Number of people involved.</li>
+          <li class="item-explicacao"><b><code>condutor</code>:</b> Indicates if the driver was responsible for the accident.</li>
+          <li class="item-explicacao"><b><code>desc_severidade</code>:</b> Indicates whether the accident was fatal or not.</li>
+          <li class="item-explicacao"><b><code>sexo</code>:</b> Gender of the person involved.</li>
+          <li class="item-explicacao"><b><code>cinto_seguranca</code>:</b> Seat belt usage.</li>
+          <li class="item-explicacao"><b><code>embriaguez</code>:</b> Driver's alcohol condition.</li>
+          <li class="item-explicacao"><b><code>idade</code></b> / <b><code>nascimento</code>:</b> Age group and birth date.</li>
           <li class="item-explicacao"><b><code>categoria_habilitacao</code></b> /
-            <b><code>descricao_habilitacao</code>:</b> Tipo e descrição da habilitação.
+            <b><code>descricao_habilitacao</code>:</b> License category and description.
           </li>
-          <li class="item-explicacao"><b><code>declaracao_obito</code>:</b> Indicação de óbito no acidente.</li>
-          <li class="item-explicacao"><b><code>cod_severidade_antiga</code>:</b> Código anterior de severidade.</li>
-          <li class="item-explicacao"><b><code>especie_veiculo</code>:</b> Tipo de veículo envolvido.</li>
-          <li class="item-explicacao"><b><code>pedestre</code></b> / <b><code>passageiro</code>:</b> Envolvimento de
-            pedestres e passageiros.</li>
+          <li class="item-explicacao"><b><code>declaracao_obito</code>:</b> Death declaration in the accident.</li>
+          <li class="item-explicacao"><b><code>cod_severidade_antiga</code>:</b> Previous severity code.</li>
+          <li class="item-explicacao"><b><code>especie_veiculo</code>:</b> Type of vehicle involved.</li>
+          <li class="item-explicacao"><b><code>pedestre</code></b> / <b><code>passageiro</code>:</b> Involvement of pedestrians and passengers.</li>
         </ul>
       </div>
-
+  
       <div class="card-explicacao">
-        <h2 class="titulo-secundario">Por que essa base foi escolhida?</h2>
+        <h2 class="titulo-secundario">Why Was This Dataset Chosen?</h2>
         <p class="paragrafo-intro">
-          Essa base se destaca por sua riqueza de detalhes e organização. Permite a realização de análises descritivas
-          profundas e o desenvolvimento de modelos preditivos com foco na gravidade dos acidentes. Sua granularidade é
-          ideal para entender os fatores que influenciam a severidade dos acidentes de trânsito no Brasil.
+          This dataset stands out for its level of detail and organization. It enables deep descriptive analyses
+          and the development of predictive models focused on accident severity. Its granularity is ideal for understanding
+          the factors that influence traffic accident outcomes in Brazil.
         </p>
       </div>
-
+  
       <div class="card-explicacao">
-        <h2 class="titulo-secundario">Fonte e Informações da Base</h2>
+        <h2 class="titulo-secundario">Source and Dataset Information</h2>
         <ul class="lista-explicacao">
-          <li class="item-explicacao"><b>Nome:</b> DETRAN Accidents - 2020</li>
-          <li class="item-explicacao"><b>Autor:</b> Raphael Marconato</li>
-          <li class="item-explicacao"><b>Link do Dataset:</b> <a
-              href="https://www.kaggle.com/datasets/raphaelmarconato/detran-accidents-2020" target="_blank">Clique
-              aqui</a></li>
-          <li class="item-explicacao"><b>Licença:</b> Não especificada</li>
-          <li class="item-explicacao"><b>Frequência de atualização:</b> Não informada</li>
+          <li class="item-explicacao"><b>Name:</b> DETRAN Accidents - 2020</li>
+          <li class="item-explicacao"><b>Author:</b> Raphael Marconato</li>
+          <li class="item-explicacao"><b>Platform:</b> Kaggle</li>
+          <li class="item-explicacao"><b>Records:</b> 22,644</li>
+          <li class="item-explicacao"><b>Columns:</b> 18 (14 categorical)</li>
         </ul>
       </div>
 
       <div class="card-explicacao">
-        <h2 class="titulo-secundario">Sobre o Autor</h2>
+        <h2 class="titulo-secundario">About the Author</h2>
         <p class="paragrafo-intro">
-          Raphael Marconato é graduado em Engenharia de Computação e atua com ciência de dados voltada a problemas
-          sociais, como mobilidade urbana e segurança viária. Em seu perfil no Kaggle, compartilha bases de dados e
-          notebooks com foco em projetos que gerem impacto positivo na sociedade.
+          Raphael Marconato holds a degree in Computer Engineering and works with data science focused on social issues such as urban mobility and road safety. On his Kaggle profile, he shares datasets and notebooks centered on projects that aim to generate a positive impact on society.
         </p>
         <p class="paragrafo-intro">
-          <a href="https://www.kaggle.com/raphaelmarconato" target="_blank">Perfil no Kaggle</a>
+          <a href="https://www.kaggle.com/raphaelmarconato" target="_blank">Kaggle Profile</a>
         </p>
         <p class="paragrafo-intro">
-          O autor possui uma foto pública em seu perfil, porém optamos por não exibir uma imagem para respeitar sua
-          privacidade.
+          The author has a public photo on his profile, but we chose not to display an image in order to respect his privacy.
         </p>
       </div>
-
+      
     </section>
   </main>
+  
 
   <script src="../js/responsividade.js"></script>
 </body>

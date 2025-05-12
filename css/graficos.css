@@ -3,65 +3,67 @@
     padding: 20px;
 }
 
-/* CARROSSEL */
-
-.container-carrossel-maior-features {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
+.card-explicacaoGraficosPrincipais {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
-.wrapper-carrossel-features {
-    max-width: 1100px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow: hidden;
+.card-explicacaoGraficosPrincipais .titulo-secundarioGraficosPrincipais {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 24px;
+    border-left: 5px solid #005C00;
+    padding-left: 12px;
 }
 
-.carrossel-list-features .carrossel-item-features {
+.lista-explicacaoGraficosPrincipais {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.carrossel-list-features .carrossel-item-features .carrossel-link-features {
-    /* user-select: none; */
-    display: block;
+.lista-explicacaoGraficosPrincipais .item-explicacaoGraficosPrincipais {
     background: linear-gradient(#ddfdce, #d3fdcd, #c7fbbd);
-    padding: 18px;
+    padding: 20px 24px;
     border-radius: 12px;
-    text-decoration: none;
     border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-    transform: 0.2s ease;
+    transition: border 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
 
-.carrossel-list-features .carrossel-item-features .carrossel-link-features:hover {
+.lista-explicacaoGraficosPrincipais .item-explicacaoGraficosPrincipais:hover {
     border-color: #005C00;
 }
 
-.carrossel-list-features .carrossel-link-features .carrossel-imagem-features {
+.lista-explicacaoGraficosPrincipais .GraficosPrincipais img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-.carrossel-list-features .carrossel-link-features .carrossel-titulo-features {
-    color: #ffffff; 
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    margin: 16px 0 18px;
+.titulosGraficosPrincipais {
     background-color: #005C00;
-    width: fit-content;
+    color: white;
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 1rem;
+    font-weight: 600;
     border-radius: 50px;
+    margin-bottom: 8px;
 }
 
-.carrossel-list-features .carrossel-link-features .carrossel-features {
-    font-size: 1.19rem;
-    color: #000000;
+.descricaoGraficosPrincipais {
+    font-size: 1.05rem;
+    color: #000;
     font-weight: 500;
-}
-
-.swiper-scrollbar {
-    display: none;
+    margin: 0;
 }
