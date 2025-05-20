@@ -15,7 +15,7 @@ form {
     max-width: 800px;
     margin: 0 auto;
 }
-  
+
 form label {
     display: block;
     font-size: 1rem;
@@ -28,8 +28,11 @@ form .obrigatorio {
     color: red;
     font-weight: bold;
 }
-  
-form select, form input[type="number"], form input[type="text"], form textarea {
+
+form select,
+form input[type="number"],
+form input[type="text"],
+form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
@@ -38,12 +41,15 @@ form select, form input[type="number"], form input[type="text"], form textarea {
     font-size: 1rem;
     background-color: #fff;
 }
-  
-form select:focus, form input[type="number"]:focus, form input[type="text"]:focus, form textarea:focus {
+
+form select:focus,
+form input[type="number"]:focus,
+form input[type="text"]:focus,
+form textarea:focus {
     border-color: #787000;
     outline: none;
 }
-  
+
 /* Estilo para o botão */
 form button {
     background-color: #787000;
@@ -55,38 +61,59 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-  
+
 form button:hover {
     background-color: #b7ab02;
 }
-  
+
 form button:focus {
     outline: none;
 }
-  
-/* Estilos personalizados por ID */ 
-#tipoAcidente, #horario, #diaSemana, #condicaoVia, #veiculosEnvolvidos, #tipoVeiculos, 
-#vitimasFatais, #feridos, #sexoVitimas, #faixaEtaria, #estado, #tipoVia, 
-#iluminacao, #cruzamento, #sinalizacao, #habilitacao, #alcoolDrogas, 
-#cintoCapacete, #velocidade, #clima, #visibilidade, #pessoasVeiculo, 
-#resgate, #interdicao, #causa {
+
+/* Estilos personalizados por ID */
+#tipoAcidente,
+#horario,
+#diaSemana,
+#condicaoVia,
+#veiculosEnvolvidos,
+#tipoVeiculos,
+#vitimasFatais,
+#feridos,
+#sexoVitimas,
+#faixaEtaria,
+#estado,
+#tipoVia,
+#iluminacao,
+#cruzamento,
+#sinalizacao,
+#habilitacao,
+#alcoolDrogas,
+#cintoCapacete,
+#velocidade,
+#clima,
+#visibilidade,
+#pessoasVeiculo,
+#resgate,
+#interdicao,
+#causa {
     background-color: #f9f9f9;
 }
-  
+
 /* Estilo para campos de texto e textarea */
-form input[type="text"], form textarea {
+form input[type="text"],
+form textarea {
     height: 40px;
 }
-  
+
 form textarea {
     resize: vertical;
     min-height: 100px;
 }
-  
+
 form input[type="number"] {
     max-width: 150px;
 }
-  
+
 /* Estilo para selects */
 form select {
     font-family: 'Lato', sans-serif;
@@ -96,31 +123,49 @@ form select {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-  
+
 /* Ajustes de espaçamento */
 form label {
     margin-bottom: 8px;
 }
-  
-form select, form input[type="number"], form input[type="text"], form textarea {
+
+form select,
+form input[type="number"],
+form input[type="text"],
+form textarea {
     margin-bottom: 16px;
 }
-  
+
 form button {
     display: block;
     width: 100%;
     margin-top: 20px;
 }
-  
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.error {
+    background: #f8d7da;
+    color: #AD0000;
+}
+
+.success {
+    background: #d4edda;
+    color: #005C00;
+}
+
 /* Ajustes para mobile */
 @media (max-width: 600px) {
     form {
-    padding: 10px;
+        padding: 10px;
+    }
+
+    form button {
+        width: auto;
+        margin-top: 10px;
+    }
 }
-  
-form button {
-    width: auto;
-    margin-top: 10px;
-}
-}
-  
