@@ -119,301 +119,59 @@
   <!-- CONTEUDO PRINCIPAL PREVISAO -->
 
   <main class="conteudo-principal-PF">
-    <form id="formulario">
-      <label for="tipoAcidente">1. What type of accident occurred?<span class="obrigatorio"> *</span></label>
-      <select id="tipoAcidente" name="tipoAcidente" required>
-        <option value="">Select</option>
-        <option value="fatal">Fatal</option>
-        <option value="nao_fatal">Non-fatal</option>
-        <option value="sem_ferimentos">No injuries</option>
-        <option value="nao_informado">Not informed</option>
-      </select>
-  
-      <label for="horario">2. At what time did the accident happen?<span class="obrigatorio"> *</span></label>
-      <select id="horario" name="horario" required>
-        <option value="">Select</option>
-        <option value="00:00">00:00</option>
-        <option value="01:00">01:00</option>
-        <option value="02:00">02:00</option>
-        <option value="03:00">03:00</option>
-        <option value="04:00">04:00</option>
-        <option value="05:00">05:00</option>
-        <option value="06:00">06:00</option>
-        <option value="07:00">07:00</option>
-        <option value="08:00">08:00</option>
-        <option value="09:00">09:00</option>
-        <option value="10:00">10:00</option>
-        <option value="11:00">11:00</option>
-        <option value="12:00">12:00</option>
-        <option value="13:00">13:00</option>
-        <option value="14:00">14:00</option>
-        <option value="15:00">15:00</option>
-        <option value="16:00">16:00</option>
-        <option value="17:00">17:00</option>
-        <option value="18:00">18:00</option>
-        <option value="19:00">19:00</option>
-        <option value="20:00">20:00</option>
-        <option value="21:00">21:00</option>
-        <option value="22:00">22:00</option>
-        <option value="23:00">23:00</option>
-      </select>
-  
-      <label for="diaSemana">3. On which day of the week did the accident occur?<span class="obrigatorio"> *</span></label>
-      <select id="diaSemana" name="diaSemana" required>
-        <option value="">Select</option>
-        <option>Sunday</option>
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-        <option>Thursday</option>
-        <option>Friday</option>
-        <option>Saturday</option>
+    <form id="form">
+      <h2 class="titulo-secundario">Accident Severity Prediction</h2>
+      <label for="condutor">Driver: <span class="obrigatorio">
+          *</span></label>
+      <select id="condutor" name="condutor" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="SIM">Yes</option>
+        <option value="NÃO">No</option>
       </select>
 
-      <label for="condicaoVia">4. What was the road condition at the time of the accident?<span class="obrigatorio"> *</span></label>
-      <select id="condicaoVia" name="condicaoVia" required>
-        <option value="">Select</option>
-        <option value="boa">Good</option>
-        <option value="regular">Fair</option>
-        <option value="ruim">Bad</option>
-        <option value="nao_informado">Not informed</option>
+      <label for="cinto_seguranca">Seatbelt: <span class="obrigatorio">
+          *</span></label>
+      <select id="cinto_seguranca" name="cinto_seguranca" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="SIM">Yes</option>
+        <option value="NÃO">No</option>
       </select>
 
-      <label for="veiculosEnvolvidos">5. How many vehicles were involved?<span class="obrigatorio"> *</span></label>
-      <select id="veiculosEnvolvidos" name="veiculosEnvolvidos" required>
-        <option value="">Select</option>
-        <option value="1">1 vehicle</option>
-        <option value="2">2 vehicles</option>
-        <option value="3">3 vehicles</option>
-        <option value="4">4 vehicles</option>
-        <option value="5">5 vehicles</option>
-        <option value="6">6 vehicles</option>
-        <option value="7">7 vehicles</option>
-        <option value="8">8 vehicles</option>
-        <option value="9">9 vehicles</option>
-        <option value="10">10 vehicles</option>
-        <option value="mais_10">More than 10 vehicles</option>
+      <label for="Embreagues">Clutches: <span class="obrigatorio">
+          *</span></label>
+      <select id="Embreagues" name="Embreagues" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="SIM">Yes</option>
+        <option value="NÃO">No</option>
+        <option value="NAO INFORMADO">Not reported</option>
       </select>
 
-      <label for="tipoVeiculos">6. What type(s) of vehicle(s) were involved?</label>
-      <select id="tipoVeiculos" name="tipoVeiculos">
-        <option value="">Select</option>
-        <option value="carro">Car</option>
-        <option value="moto">Motorcycle</option>
-        <option value="caminhao">Truck</option>
-        <option value="onibus">Bus</option>
-        <option value="bicicleta">Bicycle</option>
-        <option value="pedestre">Pedestrian</option>
-        <option value="outro">Other</option>
+      <label for="Idade">Age: <span class="obrigatorio">
+          *</span></label>
+      <input type="number" id="Idade" name="Idade" min="1" max="120" required>
+
+      <label for="especie_veiculo">Vehicle Type: <span class="obrigatorio">
+          *</span></label>
+      <select id="especie_veiculo" name="especie_veiculo" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="AUTOMOVEL">Car</option>
+        <option value="MOTOCICLETA">Motorcycle</option>
+        <option value="CAMINHAO">Truck</option>
+        <option value="ONIBUS">Bus</option>
+        <option value="BICICLETA">Bicycle</option>
+        <option value="NAO INFORMADO">Not reported</option>
       </select>
 
-      <label for="vitimasFatais">7. How many fatalities were there in the accident?</label>
-      <select id="vitimasFatais" name="vitimasFatais">
-        <option value="">Select</option>
-        <option value="0">None</option>
-        <option value="1">1 victim</option>
-        <option value="2">2 victims</option>
-        <option value="3">3 victims</option>
-        <option value="4">4 victims</option>
-        <option value="5">5 victims</option>
-        <option value="6">6 victims</option>
-        <option value="7">7 victims</option>
-        <option value="8">8 victims</option>
-        <option value="9">9 victims</option>
-        <option value="10">10 victims</option>
-        <option value="mais_10">More than 10 victims</option>
-      </select>
-  
-      <label for="feridos">8. Were there any injured victims?</label>
-      <select id="feridos" name="feridos">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="sexoVitimas">9. What was the gender of the fatal victims?</label>
-      <select id="sexoVitimas" name="sexoVitimas">
-        <option value="">Select</option>
-        <option value="masculino">Male</option>
-        <option value="feminino">Female</option>
-        <option value="nao_informado">Not informed</option>
-        <option value="outro">Other</option>
-      </select>
-
-      <label for="faixaEtaria">10. What was the age range of the fatal victims?</label>
-      <select id="faixaEtaria" name="faixaEtaria">
-        <option value="">Select</option>
-        <option value="menor_18">Under 18 years</option>
-        <option value="18_30">18 to 30 years</option>
-        <option value="31_45">31 to 45 years</option>
-        <option value="46_60">46 to 60 years</option>
-        <option value="maior_60">Over 60 years</option>
-        <option value="nao_informado">Not informed</option>
-      </select>
-
-      <label for="estado">11. In which state did the accident occur?<span class="obrigatorio"> *</span></label>
-      <select id="estado" name="estado" required>
-        <option value="">Select</option>
-        <option value="AC">Acre</option>
-        <option value="AL">Alagoas</option>
-        <option value="AP">Amapá</option>
-        <option value="AM">Amazonas</option>
-        <option value="BA">Bahia</option>
-        <option value="CE">Ceará</option>
-        <option value="DF">Distrito Federal</option>
-        <option value="ES">Espírito Santo</option>
-        <option value="GO">Goiás</option>
-        <option value="MA">Maranhão</option>
-        <option value="MT">Mato Grosso</option>
-        <option value="MS">Mato Grosso do Sul</option>
-        <option value="MG">Minas Gerais</option>
-        <option value="PA">Pará</option>
-        <option value="PB">Paraíba</option>
-        <option value="PR">Paraná</option>
-        <option value="PE">Pernambuco</option>
-        <option value="PI">Piauí</option>
-        <option value="RJ">Rio de Janeiro</option>
-        <option value="RN">Rio Grande do Norte</option>
-        <option value="RS">Rio Grande do Sul</option>
-        <option value="RO">Rondônia</option>
-        <option value="RR">Roraima</option>
-        <option value="SC">Santa Catarina</option>
-        <option value="SP">São Paulo</option>
-        <option value="SE">Sergipe</option>
-        <option value="TO">Tocantins</option>
-      </select>
-
-      <label for="tipoVia">12. What type of road did the accident occur on?<span class="obrigatorio"> *</span></label>
-      <select id="tipoVia" name="tipoVia" required>
-        <option value="">Select</option>
-        <option value="rua">Street</option>
-        <option value="avenida">Avenue</option>
-        <option value="rodovia">Highway</option>
-        <option value="estrada_rural">Rural road</option>
-        <option value="outro">Other</option>
-      </select>
-  
-      <label for="iluminacao">13. Was the road illuminated at the time of the accident?</label>
-      <select id="iluminacao" name="iluminacao">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="cruzamento">14. Did the accident occur at an intersection or crossing?</label>
-      <select id="cruzamento" name="cruzamento">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="sinalizacao">15. Was there any signage at the accident location?</label>
-      <select id="sinalizacao" name="sinalizacao">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="habilitacao">16. Did the drivers have a driver's license?</label>
-      <select id="habilitacao" name="habilitacao">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="alcoolDrogas">17. Was there suspicion of alcohol or drug consumption by the drivers?</label>
-      <select id="alcoolDrogas" name="alcoolDrogas">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Not identified</option>
-      </select>
-  
-      <label for="cintoCapacete">18. Did the drivers wear seat belts or helmets?<span class="obrigatorio"> *</span></label>
-      <select id="cintoCapacete" name="cintoCapacete" required>
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Partially</option>
-      </select>
-  
-      <label for="velocidade">19. Was speeding a probable cause?<span class="obrigatorio"> *</span></label>
-      <select id="velocidade" name="velocidade" required>
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-        <option>Suspected</option>
-      </select>
-  
-      <label for="clima">20. What was the weather condition at the time of the accident?<span class="obrigatorio"> *</span></label>
-      <select id="clima" name="clima" required>
-        <option value="">Select</option>
-        <option value="ensolarado">Sunny</option>
-        <option value="nublado">Cloudy</option>
-        <option value="chuva">Rainy</option>
-        <option value="nevoeiro">Fog</option>
-        <option value="ventos_fortes">Strong winds</option>
-        <option value="nao_informado">Not informed</option>
-      </select>
-  
-      <label for="visibilidade">21. Was visibility compromised?</label>
-      <select id="visibilidade" name="visibilidade">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="pessoasVeiculo">22. How many people were in the vehicles involved?</label>
-      <select id="pessoasVeiculo" name="pessoasVeiculo">
-        <option value="">Select</option>
-        <option value="1">1 person</option>
-        <option value="2">2 people</option>
-        <option value="3">3 people</option>
-        <option value="4">4 people</option>
-        <option value="5">5 people</option>
-        <option value="6">6 people</option>
-        <option value="7">7 people</option>
-        <option value="8">8 people</option>
-        <option value="9">9 people</option>
-        <option value="10">10 people</option>
-        <option value="mais_10">More than 10 people</option>
-      </select>
-  
-      <label for="resgate">23. Was rescue team assistance needed?</label>
-      <select id="resgate" name="resgate">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="interdicao">24. Was the road closed?</label>
-      <select id="interdicao" name="interdicao">
-        <option value="">Select</option>
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-  
-      <label for="causa">25. What was the presumed main cause of the accident?</label>
-      <select id="causa" name="causa">
-        <option value="">Select</option>
-        <option value="excesso_velocidade">Excessive speed</option>
-        <option value="condicoes_da_via">Road conditions (potholes, uneven pavement)</option>
-        <option value="falta_atenção_motorista">Driver inattention</option>
-        <option value="uso_de_celular">Cell phone use</option>
-        <option value="ingestao_alcool_drogas">Alcohol or drug consumption</option>
-        <option value="fadiga_motorista">Driver fatigue</option>
-        <option value="clima_adverso">Adverse weather</option>
-        <option value="falha_mecanica">Mechanical failure</option>
-        <option value="outro">Other</option>
-        <option value="nao_informado">Not informed</option>
-      </select>
-
-      <button type="submit">Submit</button>
+      <button type="submit">Predict Severity</button>
     </form>
+
+    <div id="resultado"></div>
+
   </main>
 
   <script src="../js/responsividade.js"></script>
   <script src="../js/forms.js"></script>
+  <script src="../js/predict.js"></script>
 </body>
 
 </html>
