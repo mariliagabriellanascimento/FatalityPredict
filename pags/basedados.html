@@ -27,16 +27,10 @@
       <section class="menu">
         <ul class="conjuntoLateral">
           <li class="listaLateral" id="listaHome">
-            <a href="../index.html">Home</a>
+            <a href="../index.html">Traffic Accidents</a>
           </li>
           <li class="listaLateral" id="listaBaseDados">
             <a href="basedados.html">Data Base</a>
-          </li>
-          <li class="listaLateral" id="listaEDA">
-            <a href="eda.html">Exploratory Data Analysis</a>
-          </li>
-          <li class="listaLateral" id="listaLearnMore">
-            <a href="saibamais.html">Learn More</a>
           </li>
           <li class="listaLateral" id="listaPF">
             <a href="previsaofatalidade.html">FatalityPredict</a>
@@ -95,16 +89,10 @@
     <nav>
       <ul>
         <li class="listaLateralMobile" id="listaHomeMobile">
-          <a href="../index.html">Home</a>
+          <a href="../index.html">Traffic Accidents</a>
         </li>
         <li class="listaLateralMobile" id="listaBaseDadosMobile">
           <a href="basedados.html">Data Base</a>
-        </li>
-        <li class="listaLateralMobile" id="listaEDAMobile">
-          <a href="eda.html">Exploratory Data Analysis</a>
-        </li>
-        <li class="listaLateralMobile" id="listaLearnMoreMobile">
-          <a href="saibamais.html">Learn More</a>
         </li>
         <li class="listaLateralMobile" id="listaPFMobile">
           <a href="previsaofatalidade.html">FatalityPredict</a>
@@ -200,7 +188,99 @@
           privacy.
         </p>
       </div>
+    </section>
 
+    <!-- EDA -->
+
+    <section class="container-explicacao">
+      <h1 class="titulo-principal">Exploratory Data Analysis (EDA)</h1>
+
+      <p class="paragrafo-intro">
+        The EDA phase aimed to understand the structure of the traffic accident data provided by DETRAN in 2020.
+        Distributions, outliers, missing values, and dataset balance were explored to ensure quality for building the
+        predictive model.
+      </p>
+
+      <div class="card-explicacao">
+        <h2 class="titulo-secundario">Data Cleaning and Quality</h2>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">Presence of <b>missing values</b> in the <code>pedestre</code> and
+            <code>passageiro</code> columns (~10%), handled through exclusion or conditional imputation.
+          </li>
+          <li class="item-explicacao">Some records with <b>age equal to 0</b> or negative were removed as they did not
+            represent valid values.</li>
+          <li class="item-explicacao">The <code>data_hora_boletim</code> column was converted to <code>datetime</code>
+            type to enable temporal analyses like hourly distribution.</li>
+          <li class="item-explicacao">Inconsistent values such as <code>"NAO INFORMADO"</code> were filtered from the
+            target variable to avoid noise in modeling.</li>
+        </ul>
+      </div>
+
+      <div class="card-explicacaoGraficoEDA">
+        <h2 class="titulo-secundario">Dataset Balance</h2>
+        <p class="paragrafo-intro">The dataset shows significant imbalance between severity classes, as shown in the
+          graph below:</p>
+        <div class="grafico">
+          <p class="titulosGraficos"><b>Severity Class Distribution</b></p>
+          <img src="../img/graficos/balanceamento-da-base.png" alt="Severity Class Distribution">
+        </div>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">The <b>“FATAL”</b> class represents a minority, requiring strategies such as
+            <b><code>SMOTE</code></b> or <b><code>undersampling</code></b>.
+          </li>
+          <li class="item-explicacao">The <b>“NAO INFORMADO”</b> class was removed to avoid bias in model evaluation.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-explicacaoGraficoEDA">
+        <h2 class="titulo-secundario">Key Detected Patterns</h2>
+        <ul class="lista-explicacaoGrafico">
+          <li class="item-explicacaoGrafico">Greater severity in cases without seatbelt use.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Distribution by Seatbelt Use</b></p>
+              <img src="../img/graficos/distribuicao-cinto-seguranca.png" alt="Seatbelt Use vs Severity">
+            </div>
+          </li>
+          <li class="item-explicacaoGrafico">Drunk driving cases, though less frequent, are more associated with fatal
+            accidents.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Drunk Driving and Severity Distribution</b></p>
+              <img src="../img/graficos/distribuicao-embreaguez.png" alt="Drunk Driving vs Severity">
+            </div>
+          </li>
+          <li class="item-explicacaoGrafico">Accidents occur more frequently between 5 PM and 7 PM.
+            <div class="grafico">
+              <p class="titulosGraficos"><b>Accident Distribution by Hour</b></p>
+              <img src="../img/graficos/distribuicao-acidentes-hora-por-dia.png" alt="Accidents by Time of Day">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-explicacao">
+        <h2 class="titulo-secundario">Quantitative Insights</h2>
+        <ul class="lista-explicacao">
+          <li class="item-explicacao">Variables such as <b>age</b> and <b>number of people involved</b> were analyzed
+            using boxplots and quartiles by severity.</li>
+          <li class="item-explicacao">Creation of a new feature <code>hora_acidente</code> from
+            <code>data_hora_boletim</code>.
+          </li>
+          <li class="item-explicacao">A <b>correlation heatmap</b> showed that seatbelt non-use, alcohol consumption,
+            and number of people involved have a positive correlation with higher severity.</li>
+        </ul>
+        <div class="grafico">
+          <p class="titulosGraficos"><b>Variable Correlation Heatmap</b></p>
+          <img id="heatmap" src="../img/graficos/heatmap-correlacao.png" alt="Correlation Heatmap">
+        </div>
+      </div>
+
+      <h2 class="titulo-secundario">EDA Conclusions</h2>
+      <p class="paragrafo-final">
+        The exploratory analysis revealed the need for cleaning, standardization, and dataset balancing. It was also
+        essential in identifying key variables related to accident severity, such as seatbelt use, alcohol consumption,
+        and age. These findings guided the feature engineering process and model selection.
+      </p>
     </section>
   </main>
 

@@ -108,7 +108,6 @@
 
   .conteudo-principal-home {
     margin-left: 0 !important;
-    margin-bottom: 100px;
   }
 
   .conteudo-principal-basedados {
@@ -116,14 +115,9 @@
     margin-bottom: 100px;
   }
 
-  .conteudo-principal-eda {
-    margin-left: 0 !important;
-    margin-bottom: 100px;
-  }
-
   .conteudo-principal-saibamais {
     margin-left: 0 !important;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 
   .conteudo-principal-PF {
