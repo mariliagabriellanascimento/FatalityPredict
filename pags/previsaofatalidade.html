@@ -50,8 +50,8 @@
             <a href="sobrenos.html" class="linkEquipe">About Us</a>
           </li>
           <li class="listaLateralRodape">
-            <a href="https://github.com/mariliagabriellanascimento/FatalityPredict" target="_blank" rel="noopener noreferrer"><img src="../img/icon/git.png"
-                width="36px" alt="Logo GitHub"></a>
+            <a href="https://github.com/mariliagabriellanascimento/FatalityPredict" target="_blank"
+              rel="noopener noreferrer"><img src="../img/icon/git.png" width="36px" alt="Logo GitHub"></a>
           </li>
         </ul>
       </footer>
@@ -73,8 +73,8 @@
     <footer class="rodapeSobreNos">
       <p>FatalityPredict&copy; 2025.</p>
       <a href="sobrenos.html" class="linkEquipe">About Us</a>
-      <a href="https://github.com/mariliagabriellanascimento/FatalityPredict" target="_blank" rel="noopener noreferrer"><img src="../img/icon/git.png"
-          width="36px" alt="Logo GitHub"></a>
+      <a href="https://github.com/mariliagabriellanascimento/FatalityPredict" target="_blank"
+        rel="noopener noreferrer"><img src="../img/icon/git.png" width="36px" alt="Logo GitHub"></a>
     </footer>
   </div>
 
@@ -109,24 +109,30 @@
   <main class="conteudo-principal-PF">
     <form id="form">
       <h2 class="titulo-secundario">Accident Severity Prediction</h2>
-      <label for="condutor">Driver: <span class="obrigatorio">
-          *</span></label>
+
+      <label for="condutor">Driver: <span class="obrigatorio">*</span></label>
       <select id="condutor" name="condutor" required>
         <option value="" disabled selected>Select an option</option>
         <option value="SIM">Yes</option>
         <option value="NÃO">No</option>
       </select>
 
-      <label for="cinto_seguranca">Seatbelt: <span class="obrigatorio">
-          *</span></label>
+      <label for="sexo">Gender: <span class="obrigatorio">*</span></label>
+      <select id="sexo" name="sexo" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="M">M</option>
+        <option value="F">F</option>
+        <option value="NÃO INFORMADO">Not reported</option>
+      </select>
+
+      <label for="cinto_seguranca">Seatbelt: <span class="obrigatorio">*</span></label>
       <select id="cinto_seguranca" name="cinto_seguranca" required>
         <option value="" disabled selected>Select an option</option>
         <option value="SIM">Yes</option>
         <option value="NÃO">No</option>
       </select>
 
-      <label for="Embreagues">Clutches: <span class="obrigatorio">
-          *</span></label>
+      <label for="Embreagues">Alcohol: <span class="obrigatorio">*</span></label>
       <select id="Embreagues" name="Embreagues" required>
         <option value="" disabled selected>Select an option</option>
         <option value="SIM">Yes</option>
@@ -134,12 +140,21 @@
         <option value="NAO INFORMADO">Not reported</option>
       </select>
 
-      <label for="Idade">Age: <span class="obrigatorio">
-          *</span></label>
+      <label for="Idade">Age: <span class="obrigatorio">*</span></label>
       <input type="number" id="Idade" name="Idade" min="1" max="120" required>
 
-      <label for="especie_veiculo">Vehicle Type: <span class="obrigatorio">
-          *</span></label>
+      <label for="categoria_habilitacao">License Category: <span class="obrigatorio">*</span></label>
+      <select id="categoria_habilitacao" name="categoria_habilitacao" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="NÃO INFORMADO">Not reported</option>
+      </select>
+
+      <label for="especie_veiculo">Vehicle Type: <span class="obrigatorio">*</span></label>
       <select id="especie_veiculo" name="especie_veiculo" required>
         <option value="" disabled selected>Select an option</option>
         <option value="AUTOMOVEL">Car</option>
@@ -148,6 +163,22 @@
         <option value="ONIBUS">Bus</option>
         <option value="BICICLETA">Bicycle</option>
         <option value="NAO INFORMADO">Not reported</option>
+      </select>
+
+      <label for="pedestre">Pedestrian involved? <span class="obrigatorio">*</span></label>
+      <select id="pedestre" name="pedestre" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="SIM">Yes</option>
+        <option value="NÃO">No</option>
+        <option value="NA">Not reported</option>
+      </select>
+
+      <label for="passageiro">Passenger involved? <span class="obrigatorio">*</span></label>
+      <select id="passageiro" name="passageiro" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="SIM">Yes</option>
+        <option value="NÃO">No</option>
+        <option value="NA">Not reported</option>
       </select>
 
       <button type="submit">Predict Severity</button>

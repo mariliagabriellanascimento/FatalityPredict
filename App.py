@@ -13,7 +13,8 @@ target_encoder = joblib.load("label_encoder_target.pkl")
 feature_encoders = joblib.load("label_encoders_features.pkl")
 
 # Definir a ordem das features exatamente como no treino
-FEATURES_ORDER = ['condutor', 'cinto_seguranca', 'Embreagues', 'Idade', 'especie_veiculo']
+FEATURES_ORDER = ['condutor', 'sexo', 'cinto_seguranca', 'Embreagues', 'Idade', 
+                  'categoria_habilitacao', 'especie_veiculo', 'pedestre', 'passageiro']
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -37,7 +38,7 @@ def predict():
                 try:
                     value_clean = str(value).strip().upper()
                     processed_data[feature] = feature_encoders[feature].transform([value_clean])[0]
-                except ValueError as e:
+                except ValueError:
                     valid_values = list(feature_encoders[feature].classes_)
                     return jsonify({
                         'erro': f'Invalid value for {feature}: {value}',
@@ -47,11 +48,17 @@ def predict():
         # Criar DataFrame mantendo a ordem das features
         X_pred = pd.DataFrame([processed_data], columns=FEATURES_ORDER)
         
-        # Fazer predição (agora com feature names corretos)
+        # Fazer predição e calcular probabilidade
         pred = modelo.predict(X_pred)[0]
+        proba = modelo.predict_proba(X_pred)[0]
+        prob_pred = np.max(proba)  # Pega a maior probabilidade
+
         severidade = target_encoder.inverse_transform([pred])[0]
 
-        return jsonify({'severidade_predita': severidade})
+        return jsonify({
+            'severidade_predita': severidade,
+            'probabilidade': f"{prob_pred * 100:.2f}%"
+        })
 
     except Exception as e:
         return jsonify({'erro': f'Internal error: {str(e)}'}), 500
