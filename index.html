@@ -188,8 +188,112 @@
               Forest, XGBoost, and others to predict accident severity.</li>
             <li class="item-explicacao"><b>Risk Factors:</b> Identification of the main factors that increase accident
               severity.</li>
+            <li class="item-explicacao"><b>Model Chosen:</b> After testing different classifiers, we selected the
+              <b>Support Vector Machine (SVM)</b> using the RBF kernel due to its consistent performance across classes.
+            </li>
           </ul>
         </div>
+
+        <div class="card-explicacao">
+          <h3 class="titulo-secundario">Why SVM?</h3>
+          <p>
+            The SVM model showed balanced results between precision and recall for all classes, especially for
+            <b>"SEM FERIMENTOS"</b>, which is the majority class. It also demonstrated solid performance on minority
+            classes like <b>"FATAL"</b>.
+          </p>
+
+          <p><b>Validation Results:</b></p>
+          <table class="tabela-resultados">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FATAL</td>
+                <td>0.74</td>
+                <td>0.71</td>
+                <td>0.72</td>
+              </tr>
+              <tr>
+                <td>NAO FATAL</td>
+                <td>0.62</td>
+                <td>0.63</td>
+                <td>0.62</td>
+              </tr>
+              <tr>
+                <td>SEM FERIMENTOS</td>
+                <td>0.84</td>
+                <td>0.85</td>
+                <td>0.84</td>
+              </tr>
+              <tr class="total-row">
+                <td>Overall Accuracy</td>
+                <td colspan="3">0.73</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><b>Test Results:</b></p>
+          <table class="tabela-resultados">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FATAL</td>
+                <td>0.74</td>
+                <td>0.70</td>
+                <td>0.72</td>
+              </tr>
+              <tr>
+                <td>NAO FATAL</td>
+                <td>0.60</td>
+                <td>0.66</td>
+                <td>0.63</td>
+              </tr>
+              <tr>
+                <td>SEM FERIMENTOS</td>
+                <td>0.86</td>
+                <td>0.83</td>
+                <td>0.84</td>
+              </tr>
+              <tr class="total-row">
+                <td>Overall Accuracy</td>
+                <td colspan="3">0.73</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p>The confusion matrix below shows that most predictions are close to their correct categories, especially
+            for the "SEM FERIMENTOS" class, which has high true positives. Misclassifications are concentrated between
+            the "FATAL" and "NAO FATAL" classes, which are more challenging to distinguish due to their similar
+            characteristics.</p>
+
+
+          <ul class="lista-explicacaoGrafico">
+            <li class="item-explicacaoGrafico">
+              Accident severity categories showing the data imbalance in favor of "Non-Fatal" cases.
+              <div class="grafico">
+                <p class="titulosGraficos"><b>Confusion Matrix - SVM Mode</b></p>
+                <img src="./img/graficos/modelo_escolhido.png" alt="Confusion Matrix - SVM Model">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
       </div>
 
       <h2 class="titulo-secundario">Conclusion</h2>

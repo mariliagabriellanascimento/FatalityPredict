@@ -1,6 +1,6 @@
 # Previsão de Acidentes de Trânsito: Projeto com o Dataset DETRAN 2020
 
-Este projeto tem como objetivo explorar, analisar e desenvolver modelos de **machine learning** para prever a severidade dos acidentes de trânsito, utilizando dados disponibilizados pelo **DETRAN** (Departamento de Trânsito) referentes ao ano de 2020. O conjunto de dados foi disponibilizado por **Raphael Marconato**, Analista de Dados na Huawei, localizado em Dublin, Irlanda.
+Este projeto tem como objetivo explorar, analisar e desenvolver modelos de **machine learning** para prever a severidade dos acidentes de trânsito, utilizando dados disponibilizados pelo **DETRAN** (Departamento de Trânsito) referentes ao ano de 2020. O conjunto de dados foi compartilhado por **Raphael Marconato**, Analista de Dados na Huawei, localizado em Dublin, Irlanda.
 
 ## Sobre o Dataset
 
@@ -23,29 +23,69 @@ O dataset contém **22.644 registros de acidentes** ocorridos no Brasil em 2020,
 
 ## Objetivos do Projeto
 
-### 1. **Exploração e Análise de Dados (EDA):**  
-   Análise da distribuição dos acidentes, identificação de fatores de risco e estudo das correlações entre variáveis.
+### 1. **Exploração e Análise de Dados (EDA):**
+Análise da distribuição dos acidentes, identificação de fatores de risco e estudo das correlações entre variáveis.
 
-### 2. **Modelagem Preditiva:**  
-   Desenvolvimento de modelos para prever a probabilidade de um acidente resultar em fatalidade, considerando diversas condições.
+### 2. **Modelagem Preditiva:**
+Desenvolvimento de modelos para prever a probabilidade de um acidente resultar em fatalidade, considerando diversas condições.
 
-### 3. **Análise de Fatores de Risco:**  
-   Identificação dos principais fatores que aumentam a gravidade dos acidentes, fornecendo subsídios para estratégias de prevenção.
+### 3. **Análise de Fatores de Risco:**
+Identificação dos principais fatores que aumentam a gravidade dos acidentes, fornecendo subsídios para estratégias de prevenção.
 
 ## Tecnologias e Métodos Utilizados
 
 - **Python**: Linguagem principal para análise e desenvolvimento de modelos.
-- **Pandas, NumPy e Matplotlib**: Ferramentas para manipulação e visualização dos dados.
-- **Scikit-learn**: Para a criação de modelos de machine learning, como regressão, classificação e clustering.
-- **XGBoost e Random Forest**: Modelos avançados de classificação e previsão.
-- **Análise de Séries Temporais**: Para entender a variação dos acidentes ao longo do tempo e prever futuros acidentes.
+- **Pandas, NumPy, Matplotlib e Seaborn**: Manipulação e visualização de dados.
+- **Scikit-learn**: Criação de modelos de machine learning (Random Forest, SVM, KNN, etc.).
+- **SMOTE**: Técnica para balanceamento de classes.
+- **Flask + JavaScript**: Utilizados no desenvolvimento do sistema web para visualização dos resultados.
 
-## Motivação
+## Escolha do Modelo Final: SVM (Support Vector Machine)
 
-Os acidentes de trânsito representam uma das principais causas de mortes no mundo. A análise desses dados pode ser uma ferramenta poderosa para a criação de políticas públicas de segurança viária mais eficazes. Através da modelagem preditiva e da análise das fatalidades dos acidentes, nosso objetivo é contribuir com soluções que possam **reduzir o número de vítimas** e promover mais segurança para motoristas e pedestres.
+Após testes com diversos algoritmos, como Random Forest, KNN e XGBoost, o modelo SVM com kernel RBF foi o que apresentou o **melhor equilíbrio entre precisão e recall** nas três classes avaliadas:
+
+```python
+SVC(kernel='rbf', C=1.0, probability=True, random_state=42)
+```
+
+### Métricas de Validação:
+
+| Classe          | Precisão | Revocação | F1-score |
+|----------------|----------|-----------|----------|
+| FATAL          | 0.74     | 0.71      | 0.72     |
+| NAO FATAL      | 0.62     | 0.63      | 0.62     |
+| SEM FERIMENTOS | 0.84     | 0.85      | 0.84     |
+| **Acurácia**   | **0.73** |           |          |
+
+### Métricas de Teste:
+
+| Classe          | Precisão | Revocação | F1-score |
+|----------------|----------|-----------|----------|
+| FATAL          | 0.74     | 0.70      | 0.72     |
+| NAO FATAL      | 0.60     | 0.66      | 0.63     |
+| SEM FERIMENTOS | 0.86     | 0.83      | 0.84     |
+| **Acurácia**   | **0.73** |           |          |
+
+## Atributos Utilizados no Modelo
+
+O modelo SVM utilizou as seguintes variáveis para realizar a predição:
+
+- `condutor`
+- `sexo`
+- `cinto_seguranca`
+- `embriaguez`
+- `idade`
+- `categoria_habilitacao`
+- `especie_veiculo`
+- `pedestre`
+- `passageiro`
+
+## Interface Web: FatalityPredict
+
+Foi desenvolvida uma aplicação web utilizando Flask no backend e JavaScript no frontend, que permite ao usuário informar as condições de um acidente e obter a predição da severidade. A interface é intuitiva e responsiva.
 
 ## Próximos Passos
 
-- **Integração de Dados Externos:** Adicionar variáveis como dados climáticos em tempo real ou informações sobre infraestrutura urbana.
-- **Deploy do Modelo:** Criar um sistema de recomendação para as autoridades de trânsito com base nos dados previstos.
-- **Avaliação de Impacto:** Estudar o impacto potencial das soluções implementadas para melhorar a segurança no trânsito.
+- **Integração de Dados Externos:** Adicionar variáveis como dados climáticos ou de infraestrutura urbana.
+- **Deploy do Modelo:** Publicação do sistema em um servidor web.
+- **Avaliação de Impacto:** Estudo do impacto da predição em políticas públicas e segurança viária.
